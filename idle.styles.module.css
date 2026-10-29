@@ -1,0 +1,261 @@
+.idleV4 {
+  	/* width: 100%; */
+	/* height: 100%; */
+	min-height: 100vh;
+  	background: linear-gradient(180deg, #070e1f, #122143);
+  	overflow: hidden;
+  	
+	display: flex;
+  	flex-direction: column;
+	flex-grow:  1;
+
+  	isolation: isolate;
+  	text-align: left;
+
+  	color: var(--color-white);
+  	font-family: var(--font-poppins);
+	/* border: 2px solid red; */
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+p{
+	all: unset; 
+	/* user agent override ayaw kasi ng umayos e  */
+}
+
+.header {
+	/* width: 100%; */
+  	/* align-items: flex-start; */
+  	/* padding: 8px 12px; */
+	padding: 0.6em 0.8em;
+	/* border: 2px solid rgb(179, 255, 0); */
+}
+.headerTitle {
+  	position: relative;
+  	text-transform: uppercase;
+  	font-weight: 600;
+	font-size: clamp(2rem, 1rem + 2.7vw, 4.5rem);
+	/* border: 2px solid blue; */
+}
+.headerSubtitle {
+  	align-self: stretch;
+  	position: relative;
+  	font-size: 26px;
+  	letter-spacing: 0.12em;
+  	text-transform: uppercase;
+  	font-weight: 600;
+  	color: var(--color-gray-200);
+
+	margin-top: -12px;
+
+	/* border: 2px solid pink; */
+}
+
+.philwrapper{
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	width: 100%;
+	/* border: 2px solid orange; */
+}
+
+.philwrapper svg{
+	/* width: 100%; */
+	/* max-width: 100%; */
+	/* min-height: 1000px; */
+	pointer-events: none;
+	/* background-color:rgb(127, 127, 145); */
+	/* animation: breathe 10s ease-in-out infinite; */
+}
+
+.philwrapper svg path {
+	transition: fill 260ms ease, stroke 260ms ease, stroke-width 260ms ease, filter 260ms ease, opacity 260ms ease;
+}
+
+.regionPopup {
+	position: absolute;
+	transform: translate(-50%, -115%);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.55rem 0.9rem;
+	border-radius: 999px;
+	background: rgba(15, 23, 42, 0.86);
+	border: 1px solid rgba(148, 163, 184, 0.45);
+	backdrop-filter: blur(8px);
+	box-shadow: 0 12px 28px rgba(15, 23, 42, 0.38);
+	color: #f8fafc;
+	font-size: 0.72rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	pointer-events: none;
+	animation: regionPopupFloat 2.8s ease-in-out infinite;
+	z-index: 2;
+}
+
+.regionPopupDot {
+	display: block;
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #7dd3fc, #34d399);
+	box-shadow: 0 0 12px rgba(125, 211, 252, 0.9);
+}
+
+@keyframes regionPopupFloat {
+	0%,
+	100% {
+		opacity: 0.72;
+		transform: translate(-50%, -112%);
+	}
+	50% {
+		opacity: 1;
+		transform: translate(-50%, -126%);
+	}
+}
+
+@keyframes breathe {
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.03);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+path, line, circle{
+	vector-effect: non-scaling-stroke;
+
+}
+
+.cit1Icon {
+  	width: auto;
+	height: clamp(285px, 330px ,600px);
+  	margin: 0 !important;
+  	object-fit: cover;
+  	z-index: 2;
+  	flex-shrink: 0;
+
+	position: absolute;
+	top: clamp(-130px, -130px ,-150px);
+
+	transition: 300ms cubic-bezier(0.77, 0, 0.175, 1);
+	cursor: pointer;
+	animation: 2s breathe infinite ease-in-out;
+
+}
+
+.cit1Icon:hover{
+	transform: scale(1.1);
+}
+
+.cit1Icon:active{
+	transform: scale(0.95);
+	transition: 100ms ease; 
+}
+
+
+.footer {
+  	width: 100%;
+  	height: 320px;
+  	background-color: var(--color-gray-100);
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 140px 0 28px;
+  	box-sizing: border-box;
+	
+  	text-align: center;
+	font-size: 48px;
+  	font-family: var(--font-plus-jakarta-sans);
+	
+	position: relative;
+
+}
+.footerButtonText {
+  	text-transform: uppercase;
+  	font-weight: 600;
+  	flex-shrink: 0;
+	transition: 300ms ease-in-out;	
+}
+
+.remotePanel {
+	position: absolute;
+	right: 24px;
+	bottom: 18px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 10px 14px 10px 10px;
+	background: #102b31;
+	color: #fff;
+	border-radius: 6px;
+	box-shadow: 0 8px 22px rgba(15, 35, 40, 0.2);
+}
+
+.remoteQr {
+	width: 134px;
+	height: 134px;
+	display: grid;
+	place-items: center;
+	background: #fff;
+}
+
+.remoteQrLoading {
+	color: #102b31;
+	font-size: 1.4rem;
+}
+
+.remoteCopy {
+	display: grid;
+	gap: 5px;
+	font-family: var(--font-plus-jakarta-sans);
+	font-size: 0.78rem;
+	white-space: nowrap;
+	span{
+		font-size: 1.3rem;
+	}
+}
+
+.remoteCopy strong {
+	font-size: 0.7rem;
+	letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+	.remotePanel {
+		right: 12px;
+		bottom: 12px;
+		gap: 8px;
+		padding: 7px 9px 7px 7px;
+	}
+
+	.remoteQr {
+		width: 76px;
+		height: 76px;
+	}
+
+	.remoteQr svg {
+		width: 76px;
+		height: 76px;
+	}
+
+	.remoteCopy {
+		font-size: 0.68rem;
+	}
+
+	.remoteCopy strong {
+		font-size: 0.62rem;
+	}
+}

@@ -1,0 +1,134 @@
+.partnership-page {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 24px clamp(20px, 6vw, 88px) 64px;
+    color: var(--color-white);
+    background-color: var(--color-gray-100);
+}
+
+.partnership-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.partnership-back {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.partnership-back:hover,
+.partnership-back:focus-visible {
+    color: #8db8ff;
+}
+
+.partnership-scope {
+    color: var(--color-gray-200);
+}
+
+.partnership-content {
+    width: min(100%, 760px);
+    margin: clamp(48px, 12vh, 112px) auto 0;
+}
+
+.partnership-eyebrow {
+    margin: 0 0 12px;
+    color: #8db8ff;
+    text-transform: uppercase;
+}
+
+.partnership-content h1 {
+    margin: 0;
+    overflow-wrap: anywhere;
+    font-size: clamp(32px, 6vw, 56px);
+}
+
+.partnership-intro {
+    margin: 12px 0 36px;
+    color: var(--color-gray-200);
+}
+
+.partnership-map-heading {
+    margin: 0;
+    font-size: 18px;
+}
+
+.partnership-facts {
+    margin: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.partnership-facts div {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.7fr) 1.3fr;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.partnership-facts dt {
+    color: var(--color-gray-200);
+}
+
+.partnership-facts dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.partnership-qr {
+    display: grid;
+    justify-items: start;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.partnership-qr h2,
+.partnership-qr p {
+    margin: 0;
+}
+
+.partnership-qr h2 {
+    font-size: 18px;
+}
+
+.partnership-qr-code {
+    display: grid;
+    width: 184px;
+    height: 184px;
+    place-items: center;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.partnership-qr p {
+    color: var(--color-gray-200);
+    font-size: 14px;
+}
+
+.partnership-empty {
+    width: min(100%, 760px);
+    margin: 18vh auto 0;
+}
+
+.partnership-empty h1 {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+    .partnership-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .partnership-facts div {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+}
+
+.partnership-facts .information{
+    line-height: 32px;
+}

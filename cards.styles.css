@@ -1,0 +1,123 @@
+.cards{
+    background-color: var(--color-card);
+    border-radius: 12px;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+    content-visibility: auto;
+    contain-intrinsic-size: 150px;
+    position: relative;
+    display: flex;
+    transition: background-color 160ms ease, transform 160ms ease;
+
+    &:hover{
+        background-color: var(--color-card-indus);
+        transform: translateY(-2px);
+    }
+
+    &:focus-visible{
+        outline: 2px solid var(--color-accent);
+        outline-offset: 2px;
+    }
+
+    img{
+        border-radius: 20px;
+        background-size: contain;
+    }
+}
+
+.cards .content{
+    /* border: 2px solid green; */
+    display: inline-flex;
+    gap: 12px;
+    padding: 12px;
+    flex-grow: 1;
+}
+
+.cards .image{
+    width: 112px;
+    height: 112px;
+    flex: 0 0 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.cards .image-placeholder{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-accent);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.cards .description{
+    flex-grow: 1;
+    flex-direction: column;
+    /* border: 2px solid brown; */
+}
+
+.cards .qrcode{
+    /* border: 2px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.cards .qrcode-wrapper{
+    width: 90px;
+    height: 90px;
+    /* background-color: rgb(59, 59, 133); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.cards h1,h5,p{
+    margin: 0;
+    width: fit-content;
+    display: block;
+}
+
+.cards .address{
+    margin-bottom: 16px;
+}
+
+.cards .industry{
+    cursor: default;
+    border-radius: 20px;
+    padding: 3px 12px;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-card-indus);
+}
+
+.cards .company{
+    font-size: 26px;
+}
+
+.cards h4{
+    margin: -5px 0 5px 0;
+}
+
+.see_more p{
+
+}
